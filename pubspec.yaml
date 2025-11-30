@@ -62,7 +62,7 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets\images\20240314_Lisa_Manoban_07.jpg
+    - assets/images/pic.jpg
     - assets/images/IMG_1573.jpg
     # - assets/images/background.jpg
 
