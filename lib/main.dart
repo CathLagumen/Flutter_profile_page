@@ -109,6 +109,7 @@ class _AboutMePageState extends State<AboutMePage> {
     Icons.star,
     Icons.build,
     Icons.favorite,
+    Icons.contact_mail,
   ];
 
   Widget _getContent() {
@@ -121,6 +122,8 @@ class _AboutMePageState extends State<AboutMePage> {
         return _buildToolsContent();
       case 3:
         return _buildHobbiesContent();
+      case 4:
+        return _buildContactContent();
       default:
         return _buildProfileContent();
     }
@@ -548,9 +551,9 @@ class _AboutMePageState extends State<AboutMePage> {
             ),
             const SizedBox(height: 32),
             _buildHobbyCard(
-              hobbyName: 'Fish Keeping',
+              hobbyName: 'Fishkeeping',
               description: 'Caring for and enjoying aquatic life',
-              icon: Icons.water,
+              icon: Icons.water_drop,
               color: Colors.teal,
             ),
             const SizedBox(height: 16),
@@ -631,6 +634,121 @@ class _AboutMePageState extends State<AboutMePage> {
     );
   }
 
+  Widget _buildContactContent() {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 20),
+            const Center(
+              child: Column(
+                children: [
+                  Icon(Icons.contact_mail, size: 80, color: Colors.blue),
+                  SizedBox(height: 16),
+                  Text(
+                    'Contact Me',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 2, 93, 250),
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Let\'s Connect',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 32),
+            _buildContactCard(
+              title: 'Email',
+              content: 'cathlene.ilagan@betterask.erni',
+              icon: Icons.email,
+              color: Colors.red,
+            ),
+            const SizedBox(height: 16),
+            _buildContactCard(
+              title: 'LinkedIn',
+              content: 'linkedin.com/in/cathlene-ilagan-ab3744195',
+              icon: Icons.business_center,
+              color: Colors.blue,
+            ),
+            const SizedBox(height: 20),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildContactCard({
+    required String title,
+    required String content,
+    required IconData icon,
+    required Color color,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: color.withOpacity(0.1),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Icon(icon, color: color, size: 32),
+          ),
+          const SizedBox(width: 20),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.grey,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  content,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black87,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Icon(Icons.chevron_right, color: Colors.grey, size: 28),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -670,7 +788,7 @@ class _AboutMePageState extends State<AboutMePage> {
                   },
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                      horizontal: 24,
+                      horizontal: 20,
                       vertical: 8,
                     ),
                     decoration: BoxDecoration(
