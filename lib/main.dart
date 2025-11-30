@@ -12,9 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Profile Page',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(226, 245, 219, 92),
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0288D1)),
+        brightness: Brightness.light,
         useMaterial3: true,
       ),
       home: const HomePage(),
@@ -41,19 +40,14 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(240, 233, 217, 194),
-        ),
-
+        decoration: const BoxDecoration(color: Color(0xFFB3E5FC)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // if (_showImage)
             const CircleAvatar(
               radius: 100,
-              backgroundImage: AssetImage(
-                'assets/images/20240314_Lisa_Manoban_07.jpg',
-              ),
+              backgroundImage: AssetImage('assets/images/IMG_1573.jpg'),
             ),
 
             const SizedBox(height: 20),
@@ -77,7 +71,8 @@ class _HomePageState extends State<HomePage> {
                   const Text(
                     'Cathlene Ilagan',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 32,
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                       letterSpacing: 0.5,
@@ -85,23 +80,14 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    'Aspiring Software Developer',
+                    'Software Engineer',
                     style: TextStyle(
                       fontSize: 16,
-                      color: Colors.grey,
+                      color: Color.fromARGB(255, 49, 142, 229),
                       letterSpacing: 0.5,
                     ),
                   ),
                   const SizedBox(height: 8),
-                  const Text(
-                    'Passionate about creating innovative solutions through coding and technology.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black87,
-                      letterSpacing: 0.5,
-                    ),
-                  ),
                 ],
               ),
             ),
