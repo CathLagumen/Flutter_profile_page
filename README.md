@@ -1,7 +1,7 @@
 # Personal Profile Page
 
 ## Description
-A Flutter-based mobile application showcasing a personal profile page for Cathlene Ilagan, a former Mechanical Engineer transitioning into Software Engineering. The app features a modern, interactive interface with multiple sections displaying personal information, skills, tools, hobbies, and contact details.
+A Flutter-based mobile application showcasing my personal profile page, former Mechanical Engineer transitioning into Software Engineering. The app features a modern, interactive interface with multiple sections displaying personal information, skills, tools, hobbies, and contact details.
 
 ## Features
 - **Profile Picture Display** - Circular avatar with professional photo
