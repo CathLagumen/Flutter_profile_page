@@ -56,8 +56,11 @@ lib/
 ## Challenges Faced
 - **State Management** - Managing the selected tab state across different sections required converting `AboutMePage` from StatelessWidget to StatefulWidget
 - **Layout Design** - Creating a responsive layout that looks good on different screen sizes while maintaining consistent spacing and alignment
+- **Running the App Using an Emulator** - Using the chrome browser, set to android view to test the responsiveness of the app
 - **Navigation System** - Implementing a custom bottom navigation bar with visual indicators instead of using Flutter's built-in BottomNavigationBar for more design flexibility
 - **Bottom Navigation Spacing** - Adjusting icon spacing to accommodate 5 menu items while maintaining visual balance and usability
+
+
 
 ## What I Learned
 - How to structure a multi-page Flutter application with navigation
